@@ -88,8 +88,8 @@ function update() {
 
     game.physics.arcade.overlap(player, syntax, collisionHandler, null, this);
     game.physics.arcade.collide(player, syntax);
-    // player.body.velocity.x = 0;
-    // player.body.velocity.y = 0;
+    player.body.velocity.x = 0;
+    player.body.velocity.y = 0;
 
 	// player.body.setZeroVelocity();
 
@@ -135,7 +135,7 @@ function updateCounter() {
 
 function render() {
 
-    game.debug.text('Time until event: ' + timer.duration.toFixed(0), 32, 32);
+    // game.debug.text('Time until event: ' + timer.duration.toFixed(0), 32, 32);
     game.debug.text('Score: ' + total, 32, 64);
 
 }
